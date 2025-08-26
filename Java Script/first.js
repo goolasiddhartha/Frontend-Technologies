@@ -233,5 +233,3 @@
 // Example 6 on charAt()
 // let str="Hello";
 // console.log(str.charAt(2))
-
-console.log("Hello Github");
