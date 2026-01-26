@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Information</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+
+    <fieldset>
+
+        <legend>Two_Way_Data_Binding</legend>
+
+        <center>
+            <h1><tt>Welcome to Product_Information</tt></h1>
+        </center>
+
+        <hr>
+        <br>
+
+        <div ng-app="application1" ng-controller="IHUB_1">
+
+            <table>
+                <form method="post">
+                    <tr>
+                        <td><label>Pid</label></td>
+                        <td><input type="text" ng-model="Pid" autocomplete="off"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Pname</label></td>
+                        <td><input type="text" ng-model="Pname" autocomplete="off"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Price</label></td>
+                        <td><input type="text" ng-model="Price" autocomplete="off"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Company</label></td>
+                        <td><input type="text" ng-model="Company" autocomplete="off"></td>
+                    </tr>
+                </form>
+            </table>
+
+            <br>
+            <hr>
+            <br>
+
+            <center>
+                <table border="3">
+                    <tr>
+                        <th>Pid</th>
+                        <th>Pname</th>
+                        <th>Price</th>
+                        <th>Company</th>
+                    </tr>
+                    <tr>
+                        <td>{{Pid}}</td>
+                        <td>{{Pname}}</td>
+                        <td>{{Price}}</td>
+                        <td>{{Company}}</td>
+                    </tr>
+                </table>
+            </center>
+
+        </div>
+
+    </fieldset>
+
+    <script>
+        var obj1 = angular.module("application1", []);
+
+        obj1.controller("IHUB_1", function ($scope) {
+            $scope.Pid = 1001;
+            $scope.Pname = "Mobile_1";
+            $scope.Price = 23000;
+            $scope.Company = "Samsung";
+        });
+    </script>
+
+</body>
+
+</html> 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_Session</title>
+</head>
+<body>
+    <hr>
+    <center>
+        <h1><tt>JavaScript_Radio_Button Validation</tt></h1>
+    </center>
+    <hr>
+    <fieldset>
+        <legend>DOM</legend>
+        <center>
+            <form action="" onsubmit="return Test_Case1()" method="post">
+            <table border="3">
+                
+                    <tr>
+                        <td><label for="">Gender</label></td>
+                        <td><input type="radio" name="gender" value="male">
+                        <label for="">MALE</label>
+                         <input type="radio" name="gender" value="female">
+                        <label for="">FEMALE</label>
+                    </td>
+                      
+                    </tr>
+                    <tr>
+                        <td><label for="">Action</label></td>
+                        <td><input type="submit" value="SUBMIT">
+                            <input type="reset" value="RESET">
+                        </td>
+                    </tr>
+                
+
+            </table>
+            </form>
+        </center>
+        <hr>
+        <center>
+            <span id="XYZ"></span>
+        </center>
+        <hr>
+    </fieldset>
+    <script>
+        function Test_Case1()
+        {
+            var my_gender=document.getElementsByName("gender")
+            if(my_gender[0].checked==false && my_gender[1].checked==false)
+        {
+            window.alert("Dear_Customer: Please select the gender ...")
+            document.getElementById("XYZ").innerHTML="*** Dear_Customer: Please select the gender ***"
+            return false
+        }
+        }
+    </script>
+    
+</body>
+</html>

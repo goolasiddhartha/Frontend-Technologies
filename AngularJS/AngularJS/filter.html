@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employees Details</title>
+
+    <!-- AngularJS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div ng-app="application1" ng-controller="IHUB_5">
+
+        <fieldset>
+            <center>
+                <h1><tt>Employees_Details</tt></h1>
+                <hr>
+                <form>
+                    <input type="text" placeholder="Type here searching Employees" ng-model="test1">
+                </form>
+
+                <br>
+
+                <table border="1">
+                    <tr>
+                        <th>Eid</th>
+                        <th>Ename</th>
+                        <th>Esal</th>
+                        <th>Company</th>
+                    </tr>
+
+                    <tr ng-repeat="obj1 in Employees_Information | filter:test1">
+                        <td>{{obj1.Eid}}</td>
+                        <td>{{obj1.Ename}}</td>
+                        <td>{{obj1.Esal}}</td>
+                        <td>{{obj1.Company}}</td>
+                    </tr>
+                </table>
+
+            </center>
+        </fieldset>
+
+    </div>
+
+    <script>
+        var res1 = angular.module("application1", []);
+
+        res1.controller("IHUB_5", function ($scope) {
+
+            $scope.Employees_Information = [
+                { "Eid": 1003, "Ename": "Jessica_1", "Esal": 25000.0, "Company": "TCS" },
+                { "Eid": 1002, "Ename": "Jessica_3", "Esal": 23000.0, "Company": "Wipro" },
+                { "Eid": 1001, "Ename": "Jessica_2", "Esal": 19000.0, "Company": "HCL" }
+            ];
+
+        });
+    </script>
+
+</body>
+
+</html>

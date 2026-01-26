@@ -233,3 +233,142 @@
 // Example 6 on charAt()
 // let str="Hello";
 // console.log(str.charAt(2))
+
+// Arrays
+
+// let marks=[10,45,67,89,34];
+// console.log(marks)
+
+// Array Indices
+// let fruits=["Apples","Banana","Mango"];
+// console.log(fruits[0])
+// console.log(fruits[1])
+// console.log(fruits[2])
+// console.log(fruits[fruits.length-1])
+// fruits[1]="Orange";
+// console.log(fruits)
+
+// Looping in array
+// For Loop
+// let fruits=["Apple","Banana","Manogo"]
+// for (let i=0;i<fruits.length;i++){
+//     console.log(fruits[i]);
+// }
+
+// // For....of loop
+// let names=["Sidhu","Bharath","Eshaan","Aadit","Akhira"]
+// for (let name of names){
+//     console.log(name);
+// }
+
+// Find average in array
+// let marks=[85,97,44,37,76,60];
+// let sum=0;
+// for (let val of marks){
+//     sum+=val;
+// }
+// let avg=sum/marks.length;
+// console.log(sum);
+// console.log(`The average of marks is= ${avg}`);
+
+// All items with 10% offer
+// // Example 1
+// let items=[250,645,300,900,50];
+// i=0;
+// for (let val of items){
+//     console.log(`value at index ${i}=${val}`)
+//     let offer=val/10;
+//     items[i]=items[i]-offer;
+//     console.log(`Value after offer =${items[i]}`);
+//     i++;
+// }
+
+// Example 2
+// let items=[250,645,300,900,50];
+// for (let i=0;i<items.length;i++){
+//     let offer = items[i]/10;
+//     items[i]-=offer;
+// }
+// console.log(items)
+
+// Array Methods
+// let fruits = ["Apple", "Banana"];
+// fruits.push("Mango");
+// console.log(fruits)
+// fruits.pop();
+// console.log(fruits)
+// fruits.unshift("Kiwi");
+// console.log(fruits)
+// fruits.shift();
+// let a = [1, 2];
+// let b = [3, 4];
+// let c = a.concat(b);
+// console.log(c);
+// console.log(a);
+// console.log(b);
+
+// Slice()
+// let arr = [10, 20, 30, 40, 50];
+// let part = arr.slice(1, 4);
+// console.log(arr);
+// console.log(part);
+
+// Splice()
+// Remove Elements
+// let arr=[10,20,30,40,50]
+// arr.splice(1,2);
+// console.log(arr)
+// Add Elements
+// let arr=[10,20,30]
+// arr.splice(1,0,15,17);
+// console.log(arr )
+// Replace Elements
+// let arr=[10,20,30];
+// arr.splice(1,1,25);
+// console.log(arr)
+
+// Create an array to store companies--> "Bloomberg","Microsoft","Uber","Google","IBM","Netflix"
+// a. Remove the first company from the array
+// let array=["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"]
+// array.shift()
+// console.log(array)+
+// array.splice(2,2,"ola");
+// console.log(array)
+// array.push("Amazon")
+// console.log(array)
+
+// // Map
+// let nums = [67, 52, 39];
+
+// let newArr = nums.map((val) => {
+//     return val * 2;
+// });
+// console.log(newArr);
+
+// let calcsquare = (num) => {
+//     console.log(num * num);
+// };
+
+// calcsquare(5);
+
+// filter
+// let arr=[1,2,3,4,5,6,7];
+// let evenArr=arr.filter((val)=>{
+//     return val%2==0;
+// });
+// console.log(evenArr)
+
+// Reduce
+// // It will give some of array
+// let arr = [1, 2, 3, 4];
+// const output = arr.reduce((res, curr) => {
+//   return res + curr;
+// });
+// console.log(output);
+
+// Finding Highest number using reduce
+// let arr=[5,6,2,1,101,3]
+// const output=arr.reduce((prev,curr)=>{
+//     return prev>curr?prev:curr;
+// })
+// console.log(output)

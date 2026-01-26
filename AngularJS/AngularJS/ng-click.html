@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular_JS Application Development</title>
+
+    <!-- AngularJS Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div ng-app="application1" ng-controller="IHUB_3">
+        <fieldset>
+            <legend>AngularJS_Events</legend>
+
+            <center>
+                <input type="submit" value="AngularJS++" ng-click="Test_Case1()">
+                <input type="submit" value="AngularJS--" ng-click="Test_Case2()">
+            </center>
+
+            <hr>
+
+            <center>
+                <h1><tt>{{obj1}}</tt></h1>
+            </center>
+
+            <hr>
+        </fieldset>
+    </div>
+
+    <script>
+        var res1 = angular.module("application1", []);
+
+        res1.controller("IHUB_3", function ($scope) {
+
+            $scope.obj1 = 0;
+
+            $scope.Test_Case1 = function () {
+                $scope.obj1++;
+            };
+
+            $scope.Test_Case2 = function () {
+                $scope.obj1--;
+            };
+
+        });
+    </script>
+
+</body>
+
+</html>

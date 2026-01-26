@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quality Thought Login Portal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-md-offset-2">
+
+                <div class="jumbotron">
+
+                    <h4 class="text-center text-white bg-danger">Quality Thought Login Portal</h4>
+                    <hr>
+
+                    <div class="form-group">
+                        <form onsubmit="return Test_Case1()" class="form-horizontal">
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                                <input type="text" placeholder="Username" id="A" class="form-control">
+                            </div>
+
+                            <br>
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-lock"></i>
+                                </span>
+                                <input type="password" placeholder="Password" id="B" class="form-control">
+                            </div>
+
+                            <br>
+
+                            <input type="submit" value="LOGIN" class="btn btn-danger col-md-offset-4">
+
+                        </form>
+                    </div>
+
+                    <hr>
+
+                    <span id="ABC" style="color:red;font-weight:bold;"></span>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function Test_Case1() {
+
+            var username = document.getElementById("A").value;
+            var password = document.getElementById("B").value;
+
+            var res1 = username.match(/[A-Z]{1}[a-z]*[_]{1}[0-9]{5}/g);
+            var res2 = password.match(/[A-Z]{1}[_]{1}[0-9]{7}/g);
+
+            if (username == "" || username == null) {
+                window.alert("Dear User: Username is required");
+                document.getElementById("ABC").innerHTML = "*** Dear User: Username is required ***";
+                return false;
+            }
+            else if (res1 == "" || res1 == null) {
+                window.alert("Dear User: Invalid username");
+                document.getElementById("ABC").innerHTML = username + " Invalid username Ex: User_12345";
+                return false;
+            }
+
+            if (password == "" || password == null) {
+                window.alert("Dear User: Password is required");
+                document.getElementById("ABC").innerHTML = "*** Dear User: Password is required ***";
+                return false;
+            }
+            else if (res2 == "" || res2 == null) {
+                window.alert("Dear User: Password is invalid");
+                document.getElementById("ABC").innerHTML = password + " Invalid password Ex: U_1234567";
+                return false;
+            }
+
+            window.alert("Login Successful");
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>

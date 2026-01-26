@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Information</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            <center>AngularJs</center>
+        </legend>
+        <div ng-app="application1" ng-controller="IHUB_1">
+            <center>
+                <hr>
+                <h1>LOGIN</h1>
+                <hr>
+                <br>
+                <form action="" method="post">
+                    <span><b>UserName:</b></span>
+                    <input type="text" ng-model="username" placeholder="Enter your username">
+                    <br>
+                    <br>
+                    <span><b>Password:</b></span>
+                    <input type="password" ng-model="password" placeholder="Enter your password">
+                </form>
+                <br>
+                <button>Login</button>
+                <h4><a href="ng_repeat.html">Forgot password</a></h4>
+                <p><b>USERNAME IS:</b> {{username}}</p>
+                <p><b>PASSWORD IS:</b> {{password}}</p>
+            </center>
+        </div>
+    </fieldset>
+    <script>
+        var app = angular.module("application1", []);
+        app.controller("IHUB_1", function ($scope) {
+            $scope.username = "";
+            $scope.password = ""
+        })
+    </script>
+</body>
+
+</html>

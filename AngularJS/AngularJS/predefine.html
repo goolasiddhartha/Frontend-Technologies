@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Information</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div ng-app="application1" ng-controller="IHUB_5">
+        <fieldset>
+            <center>
+                <h1><tt>Product_Information</tt></h1>
+
+                <table border="2" cellpadding="20">
+                    <tr>
+                        <th>Pid</th>
+                        <th>Pname</th>
+                        <th>Price</th>
+                        <th>Company</th>
+                    </tr>
+
+                    <tr ng-repeat="X1 in Product_Information">
+                        <td>{{X1.Pid}}</td>
+                        <td>{{X1.Pname | uppercase}}</td>
+                        <td>{{X1.Price | currency}}</td>
+                        <td>{{X1.Company | lowercase}}</td>
+                    </tr>
+                </table>
+            </center>
+        </fieldset>
+
+    </div>
+
+    <script>
+        var res1 = angular.module("application1", []);
+
+        res1.controller("IHUB_5", function ($scope) {
+
+            $scope.Product_Information = [
+                { "Pid": 1001, "Pname": "Mobile_1", "Price": 23000.0, "Company": "Samsung_1" },
+                { "Pid": 1002, "Pname": "Mobile_2", "Price": 24000.0, "Company": "Samsung_2" }
+            ];
+
+        });
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+<!-- Date filter method  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date Filter</title>
+
+    <!-- AngularJS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div ng-app="application1" ng-controller="IHUB_5">
+
+        <fieldset>
+            <center>
+                <h1>
+                    <tt>{{d1}}</tt>
+                    <br>
+                    <tt>Current Year is: {{ d1 | date:'y' }}</tt>
+                </h1>
+            </center>
+        </fieldset>
+
+    </div>
+
+    <script>
+        var res1 = angular.module("application1", []);
+
+        res1.controller("IHUB_5", function ($scope) {
+            $scope.d1 = new Date();
+        });
+    </script>
+
+</body>
+
+</html>

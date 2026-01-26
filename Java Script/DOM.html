@@ -1,0 +1,84 @@
+<!-- Example 1 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>DOM</legend>
+        <center>
+            <form action="" onsubmit="return Test_case1()" method="post">
+                <label for="">UserName</label>
+                <input type="text" placeholder="username" id="A" autocomplete="off">
+                <input type="submit" value="READ_DATA">
+            </form>
+        </center>
+    </fieldset>
+    <script>
+        function Test_case1() {
+            var username = document.getElementById("A").value
+            window.alert("My username is:" + username)
+            return false
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+<!-- Example 2 on Concatatination of two numbers -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>DOM</legend>
+        <center>
+            <form action="" onsubmit="return Test_case1()" method="post">
+                <tr>
+                    <td><label for="">Number_1</label>
+                    <td><input type="text" placeholder="Number_1" id="A" autocomplete="off"></td>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Number_2</label></td>
+                    <td><input type="text" placeholder="Number_2" id="B" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Result</label></td>
+                    <td><input type="text" name="Result" id="C" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Action</label></td>
+                    <td>
+                        <input type="submit" value="submit">
+                        <input type="reset" value="reset">
+                    </td>
+                </tr>
+            </form>
+        </center>
+    </fieldset>
+    <script>
+        function Test_case1() {
+            var a = document.getElementById("A").value
+            var b = document.getElementById("B").value
+            var c = a + b;
+            document.getElementById("C").value = c;
+            return false
+
+        }
+    </script>
+</body>
+
+</html>

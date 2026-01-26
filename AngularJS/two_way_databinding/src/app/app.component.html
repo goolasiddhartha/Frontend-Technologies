@@ -1,0 +1,56 @@
+<h1>Product_Information</h1>
+
+<fieldset>
+  <legend>Product_Details</legend>
+
+  <table border="3">
+    <tr>
+      <td><label for="">Pid</label></td>
+      <td>
+        <input type="text" placeholder="Pid" [(ngModel)]="Pid" />
+      </td>
+    </tr>
+
+    <tr>
+      <td><label for="">Pname</label></td>
+      <td>
+        <input type="text" placeholder="Pname" [(ngModel)]="Pname" />
+      </td>
+    </tr>
+
+    <tr>
+      <td><label for="">Price</label></td>
+      <td>
+        <input type="text" placeholder="Price" [(ngModel)]="Price" />
+      </td>
+    </tr>
+
+    <tr>
+      <td><label for="">Company</label></td>
+      <td>
+        <input type="text" placeholder="Company" [(ngModel)]="Company" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<br />
+<hr />
+
+<table border="3">
+  <tr>
+    <th>Pid</th>
+    <th>Pname</th>
+    <th>Price</th>
+    <th>Company</th>
+  </tr>
+
+  <tr>
+    <td>{{ Pid }}</td>
+    <td>{{ Pname }}</td>
+    <td>{{ Price }}</td>
+    <td>{{ Company }}</td>
+  </tr>
+</table>
+
+<hr />

@@ -1,0 +1,36 @@
+<h1><b>Interpolation Binding</b></h1>
+<p>My username is: {{ username }}</p>
+<br>
+<hr>
+<h1><b>Using Property_Binding</b></h1>
+<br>
+<img [src]="image_1" alt="In_valid_path" height="150" width="150">
+<br>
+<hr>
+<h1><b>Using Attribute Binding</b></h1>
+<table>
+  <tr>
+    <td [attr.cols]="number_1">
+      This is Attribute binding
+    </td>
+  </tr>
+</table>
+
+<hr>
+<br>
+<h1><b>Using Class_Binding</b></h1>
+<br>
+
+<div [class.abc]="ABC">
+  This is Class_binding
+</div>
+<hr>
+<br>
+<h1><b>Style Binding</b></h1>
+<div [style.color]="color_1">
+  This is Style_Binding of Inline CSS operations in Angular
+</div>
+<hr>
+<br>
+<h1><b>Event_Binding</b></h1>
+<input type="submit" value="Angular_Button" (click)="Test_Case1()">

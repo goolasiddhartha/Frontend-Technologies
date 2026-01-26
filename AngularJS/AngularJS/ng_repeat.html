@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular_JS Application Development</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div ng-app="application1" ng-controller="IHUB_3">
+
+        <fieldset>
+            <legend>Product_Information</legend>
+
+            <center>
+                <table border="3">
+                    <tr>
+                        <th>Pid</th>
+                        <th>Pname</th>
+                        <th>Price</th>
+                        <th>Company</th>
+                        <th>M_Date</th>
+                        <th>Exp_Date</th>
+                    </tr>
+
+                    <tr ng-repeat="x1 in Product_Information">
+                        <td>{{x1.Pid}}</td>
+                        <td>{{x1.Pname}}</td>
+                        <td>{{x1.Price}}</td>
+                        <td>{{x1.Company}}</td>
+                        <td>{{x1.M_date}}</td>
+                        <td>{{x1.Exp_Date}}</td>
+                    </tr>
+
+                </table>
+            </center>
+
+        </fieldset>
+
+    </div>
+
+    <script>
+        var obj1 = angular.module("application1", []);
+
+        obj1.controller("IHUB_3", function ($scope) {
+
+            $scope.Product_Information = [
+                { "Pid": 1001, "Pname": "Mobile_1", "Price": 23000, "Company": "Samsung", "M_date": "12/12/2024", "Exp_Date": "12/12/2026" },
+                { "Pid": 1002, "Pname": "Mobile_2", "Price": 24000, "Company": "Samsung", "M_date": "12/12/2024", "Exp_Date": "12/12/2026" }
+            ];
+
+        });
+    </script>
+
+</body>
+
+</html>

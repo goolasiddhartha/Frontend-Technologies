@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_Session</title>
+</head>
+
+<body>
+    <hr>
+    <center>
+        <h1><tt>Welcome to Generative_AI Login Page</tt></h1>
+    </center>
+    <hr>
+    <fieldset>
+        <legend>AI_Login_Page</legend>
+        <center>
+            <table border="3">
+                <form action="" onsubmit="return Test_Case1()" method="post">
+                    <tr>
+                        <td><label for="">Username</label></td>
+                        <td><input type="text" placeholder="USERNAME" id="A" autocomplete="off"></td>
+                        <td><span id="ABC"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Password</label></td>
+                        <td><input type="password" placeholder="PASSWORD" id="B" autocomplete="off"></td>
+                        <td><span id="XYZ"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Actions</label></td>
+                        <td><input type="submit" value="LOGIN">
+                            <input type="reset" value="RESET">
+                        </td>
+                    </tr>
+                </form>
+
+            </table>
+        </center>
+    </fieldset>
+    <script>
+        function Test_Case1() {
+            var username = document.getElementById("A").value
+            var password = document.getElementById("B").value
+            var obj1 = username.match(/[A-Z]{1}[a-z]*[_]{1}[0-9]{7}/g)
+            var obj2 = password.match(/[A-Z]{2}[_]{1}[0-9]{5}/g)
+            if (username == "" || username == null) {
+                window.alert("Dear Customer:username is required")
+                document.getElementById("ABC").innerHTML = "*** Dear Customer:username is required ***"
+                return false
+
+            }
+            else if (obj1 == "" || obj1 == null) {
+                window.alert("In_valid username")
+                document.getElementById("ABC").innerHTML = username + " :In_valid username Ex:Rahul_1234567"
+                return false
+            }
+            if (password == "" || password == null) {
+                window.alert("Dear Customer:Password is required")
+                document.getElementById("XYZ").innerHTML = "*** Dear Customer:Password is required"
+                return false
+
+            }
+            else if (obj2 == "" || obj2 == null) {
+                window.alert("In_valid password")
+                document.getElementById("XYZ").innerHTML = password + " : Invalid_password Ex:RA_12345"
+                return false
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>

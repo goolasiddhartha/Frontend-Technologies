@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_Session</title>
+</head>
+<body>
+    <hr>
+    <center>
+        <h1><tt>JavaScript Select Validation</tt></h1>
+    </center>
+    <hr>
+    <fieldset>
+        <legend>DOM</legend>
+        <center>
+            <form action="" onsubmit="return Test_Case1()" method="post">
+            <table border="3">
+                <tr>
+                    <td><label for="">City|State|Country</label></td>
+                    <td>
+                        <select name="" id="A">
+                            <option value="">---City---</option>
+                            <option value="">Hyderabad</option>
+                             <option value="">Mumbai</option>
+                              <option value="">Banguluru</option>
+                              <option value="">Pune</option>
+                        </select>
+                        <select name="" id="B">
+                            <option value="">---State---</option>
+                            <option value="">TG</option>
+                             <option value="">MH</option>
+                              <option value="">KA</option>
+                              <option value="">AP</option>
+                        </select>
+                        <select name="" id="C">
+                            <option value="">---Country---</option>
+                            <option value="">India</option>
+                             <option value="">USA</option>
+                              <option value="">UK</option>
+                              <option value="">CANADA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Action</label></td>
+                    <td>
+                        <input type="submit" value="SUBMIT">
+                        <input type="reset" value="RESET">
+                    </td>
+                </tr>
+                
+                   
+                
+
+            </table>
+            </form>
+        </center>
+        <hr>
+        <center>
+            <span id="XYZ"></span>
+        </center>
+        <hr>
+    </fieldset>
+    <script>
+        function Test_Case1()
+        {
+            var select_1=document.getElementById("A")
+            var select_2=document.getElementById("B")
+            var select_3=document.getElementById("C")
+            if(select_1.selectedIndex=="")
+             {
+                window.alert("Dear Customer:select the city")
+                document.getElementById("XYZ").innerHTML="*** Dear Customer:select the city ***"
+                return false
+
+             }
+             else if(select_2.selectedIndex=="")
+             {
+                window.alert("Dear Customer:select the state")
+                document.getElementById("XYZ").innerHTML="*** Dear Customer:select the state ***"
+                return false
+
+             }
+               else if(select_3.selectedIndex=="")
+             {
+                window.alert("Dear Customer:select the country")
+                document.getElementById("XYZ").innerHTML="*** Dear Customer:select the country ***"
+                return false
+
+             }
+ 
+        }
+      
+    </script>
+    
+</body>
+</html>

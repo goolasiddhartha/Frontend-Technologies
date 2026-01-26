@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_Session</title>
+</head>
+<body>
+    <hr>
+    <center>
+        <h1><tt>JavaScript_Check_Box_Button Validation</tt></h1>
+    </center>
+    <hr>
+    <fieldset>
+        <legend>DOM</legend>
+        <center>
+            <form action="" onsubmit="return Test_Case1()" method="post">
+            <table border="3">
+                
+                    <tr>
+                        <td><label for="">Technologies</label></td>
+                        <td><input type="checkbox" name="technology" value="javascript">
+                        <label for="">JavaScript</label>
+                         <input type="checkbox" name="technology" value="angular">
+                        <label for="">ANGULAR</label>
+                          <input type="checkbox" name="technology" value="react">
+                        <label for="">React</label>
+                    </td>
+                      
+                    </tr>
+                    <tr>
+                        <td><label for="">Action</label></td>
+                        <td><input type="submit" value="SUBMIT">
+                            <input type="reset" value="RESET">
+                        </td>
+                    </tr>
+                
+
+            </table>
+            </form>
+        </center>
+        <hr>
+        <center>
+            <span id="XYZ"></span>
+        </center>
+        <hr>
+    </fieldset>
+    <script>
+        function Test_Case1()
+        {
+            var my_gender=document.getElementsByName("technology")
+            if(my_gender[0].checked==false && my_gender[1].checked==false && my_gender[2].checked==false)
+        {
+            window.alert("Dear_Customer: Please select atleast one_option")
+            document.getElementById("XYZ").innerHTML="*** Dear_Customer: Please select atleast one_option ***"
+            return false
+        }
+        }
+    </script>
+    
+</body>
+</html>

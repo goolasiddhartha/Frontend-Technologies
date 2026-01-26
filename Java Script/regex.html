@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_Session</title>
+</head>
+
+<body>
+    <hr>
+    <center>
+        <h1><tt>JavaScript_Session</tt></h1>
+    </center>
+    <hr>
+    <script>
+
+        // Regexr operations using match function
+
+        // Example 1 using i
+        // var str_1=window.prompt("Enter The string object:")
+        // var obj1=str_1.match(/javascript/i);
+
+        // if(obj1!==null){
+        //     document.write("Pattern 'javascript' is present <hr>" )
+        // }
+        // else{
+        //     document.write("pattern 'javascript' is not present.<hr>")
+        // }
+
+        // Example 2 using g
+        // var str1=window.prompt("Enter the string object:")
+        // var obj1=str1.match(/python/g);
+        // if(obj1!==null){
+        //     document.write("Pattern 'python' is Present")
+        // }
+        // else{
+        //     document.write("Pattern 'python' is not present")
+        // }
+
+
+        // regex operations using Search function
+
+        // var str1=window.prompt("Enter the string object:");
+        // var obj1=str1.search(/javascript/i)
+        // if (obj1!==-1){
+        //     document.write(obj1+"Pattern is There")
+        // }
+        // else{
+        //     document.write(obj1+"Pattern is not there")
+        // }
+
+
+        // Character class
+        // var Email_Address = window.prompt("Enter The Email_Address:")
+        // var uppercase = Email_Address.match(/[A-Z]/g)
+        // var lowercase = Email_Address.match(/[a-z]/g);
+        // var digits = Email_Address.match(/[0-9]/g);
+        // var alphabets = Email_Address.match(/[a-z A-Z]/g);
+        // var alphanumeric = Email_Address.match(/[a-z A-Z 0-9]/g)
+        // var specailchars = Email_Address.match(/[^a-z A-Z 0-9]/g);
+
+        // document.write("<h3>Entered Email_Address:" + Email_Address + "</h3>");
+        // document.write("<hr>")
+        // if (uppercase !== null)
+        //     document.write("Uppercase Letters: " + uppercase.join(",") + "<br>")
+        // else
+        //     document.write("No Uppercase Letters <br>")
+
+        // if (lowercase !== null)
+        //     document.write("lowercase Letters: " + lowercase.join(",") + "<br>")
+        // else
+        //     document.write("No lowercase Letters <br>")
+
+        // if (digits !== null)
+        //     document.write("digits Letters: " + digits.join(",") + "<br>")
+        // else
+        //     document.write("No digits Letters <br>")
+
+
+        // if (alphabets !== null)
+        //     document.write("alphabets Letters: " + alphabets.join(",") + "<br>")
+        // else
+        //     document.write("No alphabets Letters <br>")
+
+        // if (alphanumeric !== null)
+        //     document.write("alphanumeric Letters: " + alphanumeric.join(",") + "<br>")
+        // else
+        //     document.write("No alphanumeric Letters <br>")
+
+        // if (specailchars !== null)
+        //     document.write("specailchars Letters: " + specailchars.join(",") + "<br>")
+        // else
+        //     document.write("No specailchars Letters <br>")
+
+
+        // Predefine Classes
+
+
+        // Qualifiers in JS
+
+        // var email = window.prompt("Enter the Email:");
+
+        // // Ex1
+        // var obj1 = email.match(/A/g);
+        // if (obj1 != null) {
+        //     document.write(obj1 + ": Pattern is there<hr>");
+        // } else {
+        //     document.write(obj1 + ": Pattern is not there<hr>");
+        // }
+
+        // // Ex2
+        // obj1 = email.match(/A+/g);
+        // if (obj1 != null) {
+        //     document.write(obj1 + ": Pattern is there<hr>");
+        // } else {
+        //     document.write(obj1 + ": Pattern is not there<hr>");
+        // }
+
+        // // Ex3
+        // obj1 = email.match(/A*/g);
+        // if (obj1 != null) {
+        //     document.write(obj1 + ": Pattern is there<hr>");
+        // } else {
+        //     document.write(obj1 + ": Pattern is not there<hr>");
+        // }
+
+        // // Ex4
+        // obj1 = email.match(/A?/g);
+        // if (obj1 != null) {
+        //     document.write(obj1 + ": Pattern is there<hr>");
+        // } else {
+        //     document.write(obj1 + ": Pattern is not there<hr>");
+        // }
+
+        // // Ex5
+        // obj1 = email.match(/A{2,5}/g);
+        // if (obj1 != null) {
+        //     document.write(obj1 + ": Pattern is there<hr>");
+        // } else {
+        //     document.write(obj1 + ": Pattern is not there<hr>");
+        // }
+
+        // // Ex6
+        // obj1 = email.match(/^A/g);
+        // if (obj1 != null) {
+        //     document.write(obj1 + ": Our Pattern starts with A<hr>");
+        // } else {
+        //     document.write(obj1 + ":Our Pattern not starts with A<hr>");
+        // }
+
+        // // Ex7
+        // obj1 = email.match(/A$/g);
+        // if (obj1 != null) {
+        //     document.write(obj1 + ": Our Pattern ends with A<hr>");
+        // } else {
+        //     document.write(obj1 + ":Our Pattern not ends with A<hr>");
+        // }
+
+        // // Ex8
+        // obj1 = email.match(/[.]/g);
+        // if (obj1 != null) {
+        //     document.write(obj1 + ": Our Pattern ends with A<hr>");
+        // } else {
+        //     document.write(obj1 + ":Our Pattern not ends with A<hr>");
+        // }
+
+        // // Ex9
+        // obj1 = email.match(/./g);
+        // if (obj1 != null) {
+        //     document.write(obj1 + ": Our Pattern ends with A<hr>");
+        // } else {
+        //     document.write(obj1 + ":Our Pattern not ends with A<hr>");
+        // }
+
+
+
+        // Date object in js 
+        // var obj1 = new Date()
+        // document.write(obj1 + "<br>")
+        // document.write("Current_Year is:" + obj1.getFullYear() + "<br>")
+        // document.write("Current_Month is:" + obj1.getMonth() + "<br>")
+        // document.write("Current_Day is:" + obj1.getDay() + "<br>")
+        // document.write("Current_Hours are:" + obj1.getHours() + "<br>")
+        // document.write("Current_Minutes are:" + obj1.getMinutes() + "<br>")
+        // document.write("Current_Minutes are:" + obj1.getSeconds() + "<br>")
+
+    </script>
+
+</body>
+
+</html>
