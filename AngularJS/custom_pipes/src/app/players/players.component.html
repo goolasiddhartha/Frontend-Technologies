@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>AngularApp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron">
+          <h2 class="text-center text-white bg-danger">
+            International Cricket Team
+          </h2>
+          <hr>
+          <br>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input type="text" placeholder="Type Here for Search" required="form-control"[(ngModel)]="SearchName">
+          </div>
+
+          <table class="table table-bordered table-striped table-hover mt-3">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Team</th>
+                <th>DOB</th>
+                <th>4's</th>
+                <th>6's</th>
+                <th>Other's</th>
+                <th>Ages</th>
+                <th>Total Score</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let p1 of players | filter:SearchName">
+                <td>{{ p1.Name }}</td>
+                <td>{{ p1.Team }}</td>
+                <td>{{ p1.DOB }}</td>
+                <td>{{ p1.Fours }}</td>
+                <td>{{ p1.Sixes }}</td>
+                <td>{{ p1.Others }}</td>
+                <td>{{ p1.DOB | age}}</td>
+                <td>{{p1.Others | score:p1.Fours:p1.Sixes}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
