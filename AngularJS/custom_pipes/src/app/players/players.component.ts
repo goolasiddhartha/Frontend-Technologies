@@ -20,7 +20,7 @@ export class PlayersComponent {
         "Others":7000
       },
       {
-        "Name":"Rohit Sharms",
+        "Name":"Rohit Sharmas",
         "Team":"India",
         "DOB":"7/21/1987",
         "Fours":463,
@@ -34,22 +34,6 @@ export class PlayersComponent {
         "Fours":421,
         "Sixes":310,
         "Others":6000
-      },
-      {
-        "Name":"AB devillers",
-        "Team":"SA",
-        "DOB":"3/20/1970",
-        "Fours":435,
-        "Sixes":412,
-        "Others":8000
-      },
-            {
-        "Name":"MS Dhoni",
-        "Team":"India",
-        "DOB":"3/20/1975",
-        "Fours":510,
-        "Sixes":512,
-        "Others":9000
       }
     ]
   }

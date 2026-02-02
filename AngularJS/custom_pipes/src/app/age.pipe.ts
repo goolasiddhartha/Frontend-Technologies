@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { __values } from 'tslib';
 
 @Pipe({
   name: 'age'
@@ -13,3 +14,5 @@ export class AgePipe implements PipeTransform {
   }
 
 }
+
+

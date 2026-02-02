@@ -6,8 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ScorePipe implements PipeTransform {
 
   transform(Others:any,arg1:any,arg2:any): any {
-    let sum:any=Others+4*arg1+6*arg2
+    let sum:any=Others+(4*arg1)+(6*arg2)
     return sum;
   }
 
 }
+
